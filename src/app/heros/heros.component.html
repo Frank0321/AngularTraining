@@ -19,8 +19,9 @@
             <span> id : {{hero.id}}   &&&&   name : {{hero.name}}</span>
         </li>
     </ul>
-    <div *ngIf="selectedHero">
+    <!-- <div *ngIf="selectedHero">
         <h2>{{selectedHero.name}}</h2>
         <h2>{{selectedHero.id}}</h2>
-    </div>
+    </div> -->
+    <app-hero-detail [hero]="selectedHero"></app-hero-detail>
 </div>
