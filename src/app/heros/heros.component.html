@@ -1,0 +1,11 @@
+
+<h2>Hero object</h2>
+<div>id : {{hero.id}}</div>
+<div>name : {{hero.name | uppercase}}</div>
+
+<div>
+    <h3>雙向綁定</h3>
+    <label for="name"> hero name :</label>
+    <input id="name" [(ngModel)]="inputHero.name" placeholder="name">
+    <h3>顯示結果 : {{inputHero.name}}</h3>
+</div>
