@@ -9,3 +9,18 @@
     <input id="name" [(ngModel)]="inputHero.name" placeholder="name">
     <h3>顯示結果 : {{inputHero.name}}</h3>
 </div>
+
+<div>
+    <h3>使用 ngFor</h3>
+    <ul class="heroes">
+        <li *ngFor="let hero of heroes" 
+            [class.selected]="hero === selectedHero"
+            (click)="onSelect(hero)">
+            <span> id : {{hero.id}}   &&&&   name : {{hero.name}}</span>
+        </li>
+    </ul>
+    <div *ngIf="selectedHero">
+        <h2>{{selectedHero.name}}</h2>
+        <h2>{{selectedHero.id}}</h2>
+    </div>
+</div>
